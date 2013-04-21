@@ -1,0 +1,26 @@
+<div class="jumbotron">
+    <p class="lead">Enter an MX Record</p>
+    <form class="form-inline" ng-submit="lookup()">
+        <input class="input_domain" ng-model="domain" type="text"><a class="btn btn-large btn-success" href="#" ng-click="lookup()">Go!</a>
+    </form>
+
+</div>
+
+<div google-chart-directive chart-data="chartData" chart-version="1" chart-settings="{packages: 'geochart'}" chart-module="visualization" chart-options="{height: 400, width: 650, legend: 'none', colorAxis: {colors: ['yellow', 'green']}}">
+</div>
+
+<div class="row-fluid marketing" ng-show="results">
+
+        <div class="row result-row" ng-repeat="result in results | orderBy:['ms']">
+            <div class="span4">
+                <abbr title="((result.server.name))">((result.server.host))</abbr> <small>((result.ms))ms</small>
+            </div>
+            <div class="span1">
+                ((result.server.country))
+            </div>
+            <div class="span4" ng-repeat="a in result.answer | orderBy:['priority'] | limitTo:1">
+                ((a.exchange)) / ((a.ttl))
+            </div>
+            <a href="#" class="pull-right btn"><i class="icon-plus"></i></a>
+        </div>
+</div>

@@ -1,0 +1,48 @@
+body {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+/* Custom container */
+.container-narrow {
+    margin: 0 auto;
+    max-width: 700px;
+}
+small {
+    color:#ccc;
+}
+
+.result-row {
+    padding:1ex;
+    border: 1px solid #ddd;
+    margin-left:0px;
+    margin:1ex;
+    border-radius:1ex;
+    background-image: linear-gradient(bottom, #eee 47%, #f5f5f5 100%);
+    background-image: -o-linear-gradient(bottom, #eee 47%, #f5f5f5 100%);
+    background-image: -moz-linear-gradient(bottom, #eee 47%, #f5f5f5 100%);
+    background-image: -webkit-linear-gradient(bottom, #eee 47%, #f5f5f5 100%);
+    background-image: -ms-linear-gradient(bottom, #eee 47%, #f5f5f5 100%);
+
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.47, #eee),
+        color-stop(1, #f5f5f5)
+    );
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+input.input_domain {
+    font-size:32px;
+    color:#ccc;
+    height:32px;
+    width:80%;
+    margin-right:10px;
+}
+/* Main marketing message and sign up button */
+.jumbotron {
+    text-align: center;
+}
